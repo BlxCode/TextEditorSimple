@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextEditorSimple.vercel.app</title>
+</head>
+<body>
+    <h1>TextEditorSimple.vercel.app</h1>
+    <textarea cols="60" rows="10">
+Lorem Ipsum
+    </textarea>
+    <script>
+const textarea = document.querySelector('textarea');
+if (localStorage.getItem('textareaValue')) {
+   textarea.value = localStorage.getItem('textareaValue');
+}
+textarea.addEventListener('input', () => {
+   localStorage.setItem('textareaValue', textarea.value);
+});
+    </script>
+</body>
+</html>
